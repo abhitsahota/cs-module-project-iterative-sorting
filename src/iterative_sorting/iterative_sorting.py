@@ -18,9 +18,27 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
+    # starting at index 0
 
-
+    # for each element in the array
+    for el in range(0, len(arr)):
+        # end if there were no swaps on this iteration, otherwise run it again
+        swapped = 0
+        for pos in range(0, len(arr)-1):
+            if arr[pos] > arr[pos+1]:
+                swapped +=1
+                num = arr[pos]
+                arr[pos] = arr[pos+1]
+                arr[pos+1] = num
+            else: 
+                pass
+        if swapped == 0:
+            return arr
     return arr
+
+print(bubble_sort([8,7,6,5,3,2,5,1,9,7]))
+print(bubble_sort([1,2,3,4,5,6,7,8,9,10]))
+
 
 '''
 STRETCH: implement the Counting Sort function below
